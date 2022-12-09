@@ -242,8 +242,8 @@ li i{
     border-radius: 25px;
     margin-top: 1%;
     margin-right: 2%;
+    margin-bottom: 2%;
     margin-left: 2%;
-    margin-bottom: 3%;
     padding-bottom: 1%;
 }
 
@@ -303,8 +303,9 @@ li i{
     color: #F2F2F2;
 }
 .afficher{
+    font-size: 20px;
     margin-left: 2%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
 }
 .fa-star{
     padding-right: 5px;
@@ -324,6 +325,7 @@ li i{
     padding-top: 1%;
     margin-left: 3%;
     margin-right: 5%;
+    margin-bottom: 2%;
     width: 30%;
 }
 
@@ -346,18 +348,17 @@ li i{
 }
 
 .mostcard{
-    max-height: 70%;
     background-color: white;
     box-shadow: 0px 0px 10px #999;
     border-radius: 25px;
     margin-top: 5%;
-    margin-bottom: 3%;
-    margin-right: auto;
+    margin-bottom: 2%;
 }
 
 .mostcard2{   
     display: flex;
     flex-direction: row;
+    height: 240px;
 }
 
 .mostcard a{
@@ -370,13 +371,15 @@ li i{
 }
 
 .mostcard-image {
-    object-fit: contain;
     padding-top: 5px;
     padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 .mostcard-image img{
-    width: 90%;
+    object-fit: cover;
+    width: 65%;
+    height: 100%;
     border-radius: 20px 0px 0px 20px;
     padding-bottom: 1%;
 }
@@ -384,6 +387,7 @@ li i{
 .mostcard-body{
     text-align: left;
 }
+
 
 .mostcard-title-card {
     font-family: 'Raleway';
