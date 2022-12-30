@@ -1,13 +1,12 @@
 body{
     background-color: #FFFFFF;
-    margin-left: 5%;
-    margin-top: 0;
-    margin-right: 5%;
-    margin-bottom: 0;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
 header{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -23,7 +22,9 @@ nav {
     font-family: Raleway, sans-serif;
     font-weight: 500;
     display: flex;
-    align-content: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 25%;
 
 }
 
@@ -32,15 +33,13 @@ nav a {
     text-decoration: none;
     color: #000000;
     border-top: 2px solid transparent;
-    margin-right: 67px;
     padding-top: 44px;
+    width: 50%;
 }
 .link:hover{
     color: #0065FC;
-    width: 162px;
+    width: 50%;
     border-top: 2px solid #0065FC;
-    left: 1092px;
-    top: 0;
 }
 
 .Titre{
@@ -66,7 +65,7 @@ form{
     align-items: center;
 }
 #icon_map{
-    padding: 0.7%;
+    padding: 1.11%;
 
     background: #F2F2F2;
     
@@ -75,62 +74,59 @@ form{
     border-radius: 15px 0px 0px 15px;
 }
 
+#iconmobile{
+    display: none;
+}
 #recherche{
 
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    text-align: left;
     padding: 6%;
     background: #FFFFFF;
     text-decoration: none;
-
     border: 1px solid #F2F2F2;
-
+    color: #000000;
 
 }
 
 #recherche_button{
-    /* Texte CSS */
-    
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    
-
     color: #FFFFFF;
-
-    /* Bouton CSS*/
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.60%;
+    padding-right: 0.6%;
+    padding-left: 0.6%;
+    height: 50.1px;
     gap: 10px;
-    
-    
-
     background: #0065FC;
-    
-
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
+
 }
 
 #filtre{
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+    display: flex;
+
+}
+
+.blockfiltre{
     display: flex;
     flex-direction: row;
     align-content: center;
-    margin-top: 1%;
-    margin-bottom: 1.5%;
+    height: 100%;
+    width: 100%;
 }
 
 h2{
@@ -140,9 +136,11 @@ h2{
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
-    padding: 0.3%;
+    padding: 0.2%;
 }
-li{
+
+
+.filtres{
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -150,13 +148,10 @@ li{
     margin-right: 2%;
     padding-left: 1%;
     padding-right: 1%;
-}
 
-.filtres{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 17px;    
     
     /* Black */
     color: #000000;
@@ -166,6 +161,12 @@ li{
     border-radius: 50px;
     /* Inside auto layout */
     gap: 10px;
+    text-align: center;
+
+}
+
+p{
+    font-size: 17px;
 }
 
 .filtres:hover{
@@ -208,24 +209,28 @@ li i{
 }
 
 .hebergement{
-    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 60%;
     margin-right: 1%;
     border-radius: 40px;
     background: #F2F2F2;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 1%;
+    
 }
 
 #titre-h{
-    margin-left: 9%;
+    margin-left: 2.5%;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     padding-bottom: 1%;
-
+    margin-bottom: 2%;
+    margin-top: 4%;
 }
 
 #titre-h2{
@@ -242,7 +247,7 @@ li i{
     justify-content: center;
 }
 .card{
-    width: 25%;
+    width: 29.5%;
     background-color: white;
     box-shadow: 0px 0px 10px #999;
     border-radius: 25px;
@@ -250,7 +255,7 @@ li i{
     margin-left: 1.5%;
     margin-bottom: 3%;
     padding-bottom: 1%;
-    height: 250px;
+    height: 195px;
 }
 
 .card a{
@@ -263,20 +268,19 @@ li i{
 }
 
 .card-image {
-    object-fit: contain;
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
     box-sizing: border-box;
-    height: 60%;
+    height: auto;
 }
 
 .card-image img{
     width: 100%;
-    height: 100%;
-    max-height: 186px;
+    height: 124px;
     border-radius: 20px 20px 0px 0px;
     margin-bottom: 1px;
+    object-fit: cover;
 }
 
 .card-body{
@@ -287,11 +291,13 @@ li i{
 
 }
 
-.card-title-card {
+.title-card {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 
 .sous-titre{
@@ -299,22 +305,26 @@ li i{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 2%;
 }
 .note{
     display: flex;
     flex-direction: row;
     margin-left: 16px;
     color: #0065FC;
+    margin-top: 3%;
+    font-size: 12px;
 }
 .non-valide{
     color: #F2F2F2;
 }
 .afficher{
-    margin-left: 9%;
-    padding-bottom: 1%;
+    margin-left: 2.5%;
+
 }
 .fa-star{
-    padding-right: 5px;
+    padding-right: 2px;
 }
 #resultat{
     display: flex;
@@ -339,20 +349,22 @@ li i{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 12%;
+    margin-right: 12%;
     padding-bottom: 1%;
+    margin-top: 1.5%;
 }
 
 .fa-chart-line{
     color: #0065FC;
-    width: 18px;
+    font-size: 18px;
 }
 
 .mostcards{
     display: flex;
     flex-direction: column;
     margin-top: 1%;
+    margin-bottom: 3%;
 }
 
 .mostcard{
@@ -362,20 +374,19 @@ li i{
     margin-bottom: 5%;
     margin-right: auto;
     margin-left: auto;
-    height: 185px;
+    height: 144px;
     width: 75%;
 }
 
 .mostcard2{   
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: auto;
 }
 
 .mostcard a{
     color: #333;
     text-decoration: none;
-    height: 100%;
 }
 
 .mostcard:hover{
@@ -385,17 +396,17 @@ li i{
 .mostcard-image {
     width: 50%;
     margin-right: 10px;
-    height: 95%;
-    object-fit: contain;
+    height: auto;
     padding-top: 5px;
     padding-left: 5px;
 }
 
 .mostcard-image img{
     width: 100%;
-    height: 100%;
+    height: 134px;
     border-radius: 20px 0px 0px 20px;
     padding-bottom: 1%;
+    object-fit: cover;
 }
 
 .mostcard-info{
@@ -416,14 +427,17 @@ li i{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 16px;
+    margin-bottom: 0;
 }
 
 .mostsous-titre{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 4%;
 }
 
 .mostnote{
@@ -431,8 +445,20 @@ li i{
     flex-direction: row;
     align-self: left;
     color: #0065FC;
-    margin-top: auto;
+    margin-top: 24%;
     padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.mostnote2{
+    display: flex;
+    flex-direction: row;
+    align-self: left;
+    color: #0065FC;
+    margin-top: 35%;
+    padding-bottom: 5px;
+    font-size: 12px;
+    
 }
 
 .activitecards{
@@ -455,6 +481,11 @@ li i{
     text-decoration: none;
     height: 100%;
 }
+
+.activitecard:hover{
+    box-shadow: 0px 0px 10px;
+}
+
 .cardimage {
     box-sizing: border-box;
     height: 100%;
@@ -490,8 +521,10 @@ li i{
     margin-bottom: 2%;
 }
 
+
+
 footer{
-    background-color: #D9D9D9;
+    background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -518,4 +551,468 @@ footer div a{
     font-style: normal;
     font-size: 14px;
     margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 131px;
+    }
+
+    .Logo{
+        padding-top: 24px;
+    }
+    .menu{
+        align-content: space-around;
+        width: 100%;
+    }
+
+    .link{
+        padding-top: none;
+        padding-bottom: 14px;
+        border-bottom: 3px solid #D9D9D9;
+    }
+
+    .link:hover{
+        width: 50%;
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+    .titres{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 7%;
+    }
+
+    #recherche_bar{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #icon_map{
+        padding: 6.2%;
+    }
+
+    #recherche{
+        padding: 8.2%;
+    }
+
+    #recherche_button{
+        padding-top: 5.5%;
+        padding-bottom: 6.2%;
+        padding-left: 5.7%;
+        padding-right: 5.7%;
+        height: 60.03px;
+    }
+
+    .text_recherche{
+        display: none;
+    }
+
+    #iconmobile{
+        display: block;
+    }
+
+    #filtre{
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+        height: 114px;
+        display: block;
+    }
+
+    .blockfiltre{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+        
+    }
+
+    .filtres{
+        padding-left: 3%;
+        width: 45%;
+        height: 45%;
+        margin-right: 0;
+    }
+
+    .fa-money-bill-wave{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-person{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-heart{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-dog{
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .info{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        margin-top: 15%;
+    }
+
+    #i{
+        width: 35px;
+        height: 25px;
+        padding-top: 2px;
+    }
+
+    #resultat{
+        flex-wrap: wrap-reverse;
+    }
+
+    .hebergement{
+        margin-right: 0;
+        width: 100%;
+        border-radius: none;
+        background: none;
+    }
+
+    #titre-h{
+        margin-left: 5%;
+        font-size: 22px;
+        padding-bottom: 3%;
+        padding-top: 3%;
+    }
+
+    .card{
+        width: 90%;
+        margin-bottom: 8%;
+    }
+
+    .card-image img{
+        object-fit: cover;
+    }
+
+    .mostpopular{
+        width: 100%;
+        border-radius: none;
+    }
+
+    .mosttitle{
+        margin-left: 5%;
+    }
+
+    #titre-h2 {
+        font-size: 22px;
+    }
+
+    .mostcard{
+        height: 184px;
+        width: 90%;   
+        margin-bottom: 8%;     
+    }
+
+    .mostcard-image {
+        width: 50%;
+    }
+
+    .mostcard-image img {
+        object-fit: cover;
+    }
+    
+    .Activite{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 8%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .activitetitre {
+        width: 40%;
+        font-size: 22px;
+    }
+    .activitecards{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .activitecard{
+        margin-bottom: 8%;
+        height: 214px;
+        width: 92%;        
+    }
+
+    .cardimage img {
+        max-height: 152px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-left: 8%;        
+    }
+
+    .colum{
+        margin-bottom: 3%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    body{
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 131px;
+    }
+
+    .Logo{
+        padding-top: 24px;
+    }
+    .menu{
+        align-content: space-around;
+        width: 100%;
+    }
+
+    .link{
+        padding-top: none;
+        padding-bottom: 14px;
+        border-bottom: 3px solid #D9D9D9;
+    }
+
+    .link:hover{
+        width: 50%;
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+    .titres{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 7%;
+    }
+
+    #recherche_bar{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #icon_map{
+        padding: 6.2%;
+    }
+
+    #recherche{
+        padding: 8.2%;
+    }
+
+    #recherche_button{
+        padding-top: 5.5%;
+        padding-bottom: 6.2%;
+        padding-left: 5.7%;
+        padding-right: 5.7%;
+        height: 60.03px;
+    }
+
+    .text_recherche{
+        display: none;
+    }
+
+    #iconmobile{
+        display: block;
+    }
+
+    #filtre{
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+        height: 114px;
+        display: block;
+    }
+
+    .blockfiltre{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+        
+    }
+
+    .filtres{
+        padding-left: 3%;
+        width: 45%;
+        height: 45%;
+        margin-right: 0;
+    }
+
+    .fa-money-bill-wave{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-person{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-heart{
+        width: 20px;
+        height: 20px;
+    }
+
+    .fa-dog{
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    .info{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        margin-top: 15%;
+    }
+
+    #i{
+        width: 35px;
+        height: 25px;
+        padding-top: 2px;
+    }
+
+    #resultat{
+        flex-wrap: wrap-reverse;
+    }
+
+    .hebergement{
+        margin-right: 0;
+        width: 100%;
+        border-radius: none;
+        background: none;
+    }
+
+    #titre-h{
+        margin-left: 5%;
+        font-size: 22px;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    .afficher{
+        display: none;
+    }
+    .card{
+        width: 90%;
+        margin-bottom: 8%;
+    }
+
+    .card-image img{
+        object-fit: cover;
+        height: 114px;
+    }
+
+    .mostpopular{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .mosttitle{
+        margin-left: 5%;
+    }
+
+    #titre-h2 {
+        font-size: 22px;
+    }
+
+    .mostcard{
+        height: 184px;
+        width: 90%;   
+        margin-bottom: 8%;     
+    }
+
+    .mostcard-image {
+        width: 50%;
+    }
+
+    .mostcard-image img {
+        object-fit: cover;
+        height: 174px;
+    }
+    
+    .mostnote{
+        margin-top: 50%;
+    }
+
+    .mostnote2{
+        margin-top: 63%;
+    }
+
+    .Activite{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 8%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .activitetitre {
+        width: 40%;
+        font-size: 22px;
+    }
+    .activitecards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .activitecard{
+        margin-bottom: 8%;
+        height: 214px;
+        width: 92%;        
+    }
+
+    .cardimage img {
+        max-height: 152px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-left: 8%;        
+    }
+
+    .colum{
+        margin-bottom: 3%;
+    }
 }
